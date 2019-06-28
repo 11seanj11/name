@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome!</title>
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <style>
+            body {
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Name Generator</h1>
+        <form method="POST" action='/results'>
+            <label style= "color:black;font-size:23px;", for="letter">
+                <div class="card-panel cyan">
+                    What letter do you want the name to start with?
+            </label>
+            <input type="text" name="letter" />
+            </div>
+            <label style = "color:black;font-size:23px;" for="gender">
+                <div class="card-panel cyan">
+                What Gender?
+                
+            </label>
+             <div class="input-field col s12">
+    <select name= 'gender'>
+      <option value="" disabled selected>Choose Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+                </div>
+  </div>
+            <label style = "color:black;font-size:23px;" for="region">
+                <div class="card-panel cyan">
+                What Region?
+            </label>
+             <div class="input-field col s12">
+    <select name= 'region'>
+      <option value="" disabled selected>Choose Region</option>
+      <option value="united States">United States</option>
+      <option value="austria">Austria</option>
+      <option value="belgium">Belgium</option>
+      <option value="england">England</option>
+      <option value="france">France</option>
+      <option value="germany">Germany</option>
+      <option value="hungary">Hungary</option>
+      <option value="romania">Romania</option>
+      <option value="slovakia">Slovakia</option>
+      <option value="spain">Spain</option>
+    </select>
+                </div>
+  </div>
+            
+            <input type="submit" value="Submit"/>
+        </form>
+        
+        
+        <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });            
+        </script>
+    </body>
+</html>

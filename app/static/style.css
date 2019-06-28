@@ -1,0 +1,15 @@
+
+div {
+/*background-color: rgb(77, 182, 172);*/
+}
+body {
+margin: 20px;
+background-color: rgb(180, 255, 255);
+}
+#card-thingee {
+
+}
+.middle-plz {
+    display: flex;
+    justify-content: center;
+}
