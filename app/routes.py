@@ -2,6 +2,10 @@ from app import app
 from flask import render_template, request
 from app.models import model, formopener
 
+name=""
+gender=""
+region=""
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -12,6 +16,8 @@ def results():
     userdata = (dict(request.form))
 
     print(userdata)
+    global gender
+    global region
     letter = userdata['letter'][0]
     gender = userdata['gender'][0]
     region = userdata['region'][0]
@@ -36,4 +42,4 @@ def name_and_gif():
     gif_results = model.get_gif(name)
     # print(gif_results)
     giphy_link = gif_results[0]['images']['fixed_width']['url']
-    return render_template('name-and-gif.html', data=giphy_link, name=name)
+    return render_template('name-and-gif.html', data=giphy_link, name=name, gender=gender, region=region)

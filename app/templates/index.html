@@ -8,13 +8,21 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <style>
-            body {
-                margin: 20px;
-            }
-        </style>
     </head>
     <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5eVHE-WmUJ85hhU2JKQo0sdLh0uB1BVa3vBCTPL7kcVPvjDnR" width="65" height="65">
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li><a class="waves-effect waves-light btn">other</a></li>
+                <li><a class="waves-effect waves-light btn">other<i class="material-icons right"></i></a></li>
+                <li><a class="waves-effect waves-light btn"> other</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="not_the_nav_bar">
         <h1>Name Generator</h1>
         <form method="POST" action='/results'>
             <label style= "color:black;font-size:23px;", for="letter">
@@ -57,9 +65,12 @@
                 </div>
   </div>
             
-            <input type="submit" value="Submit"/>
+            <!--<input type="submit" value="Submit"/>-->
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right"></i>
+             </button>
         </form>
-        
+        </div>
         
         <script>
   document.addEventListener('DOMContentLoaded', function() {
